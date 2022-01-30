@@ -72,11 +72,11 @@ jobs:
       - name: 打包可执行文件
         run: |
           cd Release
-          7z a -mx9 '../../MusicPlayer2.x86.7z' '*.exe' '*.dll'
+          7z a -mx9 '../MusicPlayer2.x86.7z' '*.exe' '*.dll'
       - name: 打包其他文件
         run: |
           cd Release
-          7z a -mx9 '../../MusicPlayer2.x86.other.7z' '-ax!*.exe' '-ax!*.dll' './*'
+          7z a -mx9 '../MusicPlayer2.x86.other.7z' '-ax!*.exe' '-ax!*.dll' './*'
       - name: 上传文件
         uses: actions/upload-artifact@v2
         with:
