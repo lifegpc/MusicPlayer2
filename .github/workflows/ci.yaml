@@ -21,7 +21,8 @@ jobs:
           "--add", "Microsoft.VisualStudio.Component.Windows10SDK", `
           "--add", "Microsoft.Component.VC.Runtime.UCRTSDK", `
           "--add", "Microsoft.VisualStudio.Component.VC.ATL", `
-          "--add", "Microsoft.VisualStudio.Component.VC.ATLMFC"
+          "--add", "Microsoft.VisualStudio.Component.VC.ATLMFC" `
+          "--add", "Microsoft.VisualStudio.Component.VC.14.29.16.11.MFC"
       - name: 设置 msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: 编译
