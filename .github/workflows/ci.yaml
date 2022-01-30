@@ -25,4 +25,4 @@ jobs:
       - name: 设置 msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: 编译
-        run: msbuild -t:Build -p:Configuration=Release;platform=x64
+        run: msbuild -t:Build '-p:Configuration=Release;platform=x64'
