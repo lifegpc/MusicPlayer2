@@ -26,7 +26,7 @@ jobs:
       - name: 设置 msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: 编译
-        run: msbuild -t:Build '-p:Configuration=Release;platform=x64' -m 4
+        run: msbuild -t:Build '-p:Configuration=Release;platform=x64' -m:4
       - name: 打包可执行文件
         run: |
           cd x64/Release
@@ -68,7 +68,7 @@ jobs:
       - name: 设置 msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: 编译
-        run: msbuild -t:Build '-p:Configuration=Release;platform=x86' -m 4
+        run: msbuild -t:Build '-p:Configuration=Release;platform=x86' -m:4
       - name: 打包可执行文件
         run: |
           cd Release
