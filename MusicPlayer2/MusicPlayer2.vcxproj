@@ -244,6 +244,7 @@
     <ClInclude Include="CMainDialogBase.h" />
     <ClInclude Include="ColorStaticEx.h" />
     <ClInclude Include="CueFile.h" />
+    <ClInclude Include="DirectShowCore.h" />
     <ClInclude Include="EditStringListDlg.h" />
     <ClInclude Include="GetTagOnlineDlg.h" />
     <ClInclude Include="IPropertyTabDlg.h" />
@@ -396,6 +397,7 @@
     <ClCompile Include="CMainDialogBase.cpp" />
     <ClCompile Include="ColorStaticEx.cpp" />
     <ClCompile Include="CueFile.cpp" />
+    <ClCompile Include="DirectShowCore.cpp" />
     <ClCompile Include="EditStringListDlg.cpp" />
     <ClCompile Include="GetTagOnlineDlg.cpp" />
     <ClCompile Include="LyricRelateDlg.cpp" />

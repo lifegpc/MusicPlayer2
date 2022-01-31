@@ -298,6 +298,8 @@ struct PlaySettingData
     int fade_time{ 500 };                      //淡入淡出时间（毫秒）
 
     bool use_mci{ false };              //是否使用MCI内核
+    /// 是否使用DirectShow内核
+    bool use_directshow{ false };
 };
 
 struct GlobalHotKeySettingData

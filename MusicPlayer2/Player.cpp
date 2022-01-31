@@ -5,6 +5,7 @@
 #include "Playlist.h"
 #include "BassCore.h"
 #include "MciCore.h"
+#include "DirectShowCore.h"
 #include "MusicPlayerCmdHelper.h"
 #include "SongDataManager.h"
 #include "SongInfoHelper.h"

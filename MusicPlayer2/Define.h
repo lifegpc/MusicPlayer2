@@ -46,6 +46,9 @@ using std::map;
 //如果在Win7下编译时提示找不到api-ms-win-*.dll，可以尝试启用DISABLE_MEDIA_TRANS_CONTROLS宏
 //#define DISABLE_MEDIA_TRANS_CONTROLS
 
+/// 启用DirectShow核心
+#define ENABLE_DIRECTSHOW_CORE 1
+
 #ifndef COMPILE_IN_WIN_XP
 //用于获取系统主题颜色
 #pragma comment(lib,"Dwmapi.lib")

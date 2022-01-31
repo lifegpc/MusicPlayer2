@@ -444,6 +444,7 @@ void CMusicPlayerDlg::SaveConfig()
     ini.WriteInt(L"config", L"fade_time", theApp.m_play_setting_data.fade_time);
     ini.WriteString(L"config", L"output_device", theApp.m_play_setting_data.output_device);
     ini.WriteBool(L"config", L"use_mci", theApp.m_play_setting_data.use_mci);
+    ini.WriteBool(L"config", L"use_directshow", theApp.m_play_setting_data.use_directshow);
     ini.WriteInt(L"config", L"UI_selected", GetUiSelected());
 
     //保存热键设置
@@ -616,6 +617,9 @@ void CMusicPlayerDlg::LoadConfig()
         theApp.m_play_setting_data.fade_time = 2000;
     theApp.m_play_setting_data.output_device = ini.GetString(L"config", L"output_device", L"");
     theApp.m_play_setting_data.use_mci = ini.GetBool(L"config", L"use_mci", false);
+#if ENABLE_DIRECTSHOW_CORE
+    theApp.m_play_setting_data.use_directshow = ini.GetBool(L"config", L"use_directshow", false);
+#endif
 
     int ui_selected = ini.GetInt(L"config", L"UI_selected", 1);
     SelectUi(ui_selected);

@@ -34,6 +34,7 @@ void CPlaySettingsDlg::DoDataExchange(CDataExchange* pDX)
     DDX_Control(pDX, IDC_CONTINUE_WHEN_SWITCH_PLAYLIST_CHECK, m_continue_when_switch_playlist_check);
     DDX_Control(pDX, IDC_BASS_RADIO, m_bass_radio);
     DDX_Control(pDX, IDC_MCI_RADIO, m_mci_radio);
+    DDX_Control(pDX, IDC_DIRECTSHOW_RADIO, m_directshow_radio);
 }
 
 void CPlaySettingsDlg::ShowDeviceInfo()
@@ -142,6 +143,8 @@ BOOL CPlaySettingsDlg::OnInitDialog()
 
     if (m_data.use_mci)
         m_mci_radio.SetCheck(TRUE);
+    else if (m_data.use_directshow)
+        m_directshow_radio.SetCheck(TRUE);
     else
         m_bass_radio.SetCheck(TRUE);
 
@@ -170,6 +173,9 @@ BOOL CPlaySettingsDlg::OnInitDialog()
 
     //设置控件不响应鼠标滚轮消息
     m_output_device_combo.SetMouseWheelEnable(false);
+#if !ENABLE_DIRECTSHOW_CORE
+    m_directshow_radio.EnableWindow(FALSE);
+#endif
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 异常: OCX 属性页应返回 FALSE
@@ -230,6 +236,7 @@ void CPlaySettingsDlg::OnBnClickedBassRadio()
 {
     // TODO: 在此添加控件通知处理程序代码
     m_data.use_mci = false;
+    m_data.use_directshow = false;
 }
 
 
@@ -237,6 +244,14 @@ void CPlaySettingsDlg::OnBnClickedMciRadio()
 {
     // TODO: 在此添加控件通知处理程序代码
     m_data.use_mci = true;
+    m_data.use_directshow = false;
+}
+
+void CPlaySettingsDlg::OnBnClickedDirectShowRadio() {
+#if ENABLE_DIRECTSHOW_CORE
+    m_data.use_mci = false;
+    m_data.use_directshow = true;
+#endif
 }
 
 
