@@ -378,6 +378,9 @@
     <Filter Include="公共的类\CommonData">
       <UniqueIdentifier>{4913a86a-5b69-423e-b02f-7cf56b8e4aeb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="公共的类\database">
+      <UniqueIdentifier>{37fbc954-b804-43a5-a535-c1a1d499ba69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -848,6 +851,9 @@
     <ClInclude Include="FlacEncodeCfgDlg.h">
       <Filter>对话框类\格式转换相关对话框\编码选项对话框</Filter>
     </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>公共的类\database</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FindDlg.cpp">
@@ -1284,6 +1290,9 @@
     </ClCompile>
     <ClCompile Include="FlacEncodeCfgDlg.cpp">
       <Filter>对话框类\格式转换相关对话框\编码选项对话框</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>公共的类\database</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
